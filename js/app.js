@@ -130,7 +130,7 @@ function init(clientWidth, clientHeight) {
   });
   connectButton.addEventListener('click', function() {
     if (rsHelper.isAbleToConnect()) {
-      rsHelper.connect().then(function onResolve() {
+      rsHelper.connect({address: 'a0:14:3d:29:d3:f0'}).then(function onResolve() {
         changeConnectButtonText('connected');
       }, function onReject() {
         changeConnectButtonText('disconnect');
